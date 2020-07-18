@@ -15,6 +15,10 @@ const Results = (props) => {
   const data = props.data
   const filters = props.filters
 
+  /* 
+    the following two functions get data for the charts
+    they depend on where they are called from and filter data
+  */
   const getPopulationData = () => {
     data.geonames.sort((a, b) =>
       a.population > b.population ? 1 : b.population > a.population ? -1 : 0
@@ -128,6 +132,10 @@ const Results = (props) => {
     return options
   }
 
+  /* 
+    the following three functions get data for the tables
+    they depend on where they are called from and filter data
+  */
   const getAllTableData = () => {
     data.geonames.sort((a, b) =>
       a.continent > b.continent ? 1 : b.continent > a.continent ? -1 : 0
@@ -381,6 +389,7 @@ const Results = (props) => {
   return <div className="Results"></div>
 }
 
+// This function builds the table
 function Table({ columns, data }) {
   const defaultColumn = React.useMemo(
     () => ({
@@ -473,6 +482,7 @@ function Table({ columns, data }) {
       </div>
     </div>
   )
+  // Fixed Size List creates a table at specifications and allows full scroll within page
 }
 
 export default Results
