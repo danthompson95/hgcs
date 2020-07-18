@@ -8,6 +8,9 @@ import HighchartsReact from "highcharts-react-official"
 import { useTable, useBlockLayout, useSortBy } from "react-table"
 import { FixedSizeList } from "react-window"
 
+// CSS Imports
+import "./Results.css"
+
 const Results = (props) => {
   const data = props.data
   const filters = props.filters
