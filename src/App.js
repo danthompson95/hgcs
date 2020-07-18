@@ -8,10 +8,6 @@ import Header from "./components/Header/Header"
 import Filters from "./components/Filters/Filters"
 import Results from "./components/Results/Results"
 
-// Data info
-const API =
-  "http://api.geonames.org/countryInfoJSON?formatted=true&username=hydrane"
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -30,7 +26,9 @@ class App extends Component {
 
   // handler for the click, two way bound to go button in header.js
   goButtonClickHandler() {
-    fetch(API)
+    fetch(
+      "https://cors-anywhere.herokuapp.com/http://api.geonames.org/countryInfoJSON?formatted=true&username=hydrane"
+    )
       .then((response) => {
         if (response.ok) {
           return response.json()
