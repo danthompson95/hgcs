@@ -16,6 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props)
 
+    // state will hold the data, filters and error
     this.state = {
       data: false,
       error: null,
@@ -27,8 +28,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {}
-
+  // handler for the click, two way bound to go button in header.js
   goButtonClickHandler() {
     fetch(API)
       .then((response) => {
@@ -42,6 +42,7 @@ class App extends Component {
       .catch((error) => this.setState({ error }))
   }
 
+  // handler for the change, two way bound to the select boxes in filter.js
   filterChangedHandler(value, select) {
     this.setState({
       filters: {
@@ -54,6 +55,7 @@ class App extends Component {
   render() {
     const { data, error, filters } = this.state
 
+    // only show if error
     if (error) {
       return <p>{error.message}</p>
     }
