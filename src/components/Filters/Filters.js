@@ -21,15 +21,36 @@ const Filters = (props) => {
 
     return (
       <div className="Filters">
-        <select onChange={(e) => props.onChange(e.target.value, "continent")}>
+        <label className="Filters-label" for="selectContinent">
+          Continent
+        </label>
+        <select
+          className="Filters-select"
+          id="selectContinent"
+          onChange={(e) => props.onChange(e.target.value, "continent")}
+        >
           {continentOptions}
         </select>
-        <select onChange={(e) => props.onChange(e.target.value, "metric")}>
+        <label className="Filters-label" for="selectMetric">
+          Metric
+        </label>
+        <select
+          className="Filters-select"
+          id="selectMetric"
+          onChange={(e) => props.onChange(e.target.value, "metric")}
+        >
           <option value="ALL">ALL</option>
           <option value="areaInSqKm">Area in Square KM</option>
           <option value="population">Population</option>
         </select>
-        <select onChange={(e) => props.onChange(e.target.value, "results")}>
+        <label className="Filters-label" for="selectResults">
+          Results
+        </label>
+        <select
+          className="Filters-select"
+          id="selectResults"
+          onChange={(e) => props.onChange(e.target.value, "results")}
+        >
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>
@@ -41,15 +62,24 @@ const Filters = (props) => {
 
   return (
     <div className="Filters">
-      <select disabled>
+      <label className="Filters-label" for="selectContinent">
+        Continent
+      </label>
+      <select className="Filters-select" id="selectContinent" disabled>
         <option value="ALL">ALL</option>
       </select>
-      <select disabled>
+      <label className="Filters-label" for="selectMetric">
+        Metric
+      </label>
+      <select className="Filters-select" id="selectMetric" disabled>
         <option value="ALL">ALL</option>
         <option value="areaInSqKm">Area in Square KM</option>
         <option value="population">Population</option>
       </select>
-      <select disabled>
+      <label className="Filters-label" for="selectResults">
+        Results
+      </label>
+      <select className="Filters-select" id="selectResults" disabled>
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>
