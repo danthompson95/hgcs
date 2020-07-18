@@ -345,16 +345,11 @@ const Results = (props) => {
       return (
         <div className="Results">
           <HighchartsReact
-            className="Results-two-charts"
             highcharts={Highcharts}
             options={populationOptions}
           />
-          <HighchartsReact
-            className="Results-two-charts"
-            highcharts={Highcharts}
-            options={areaOptions}
-          />
-          <Table className="Results-table" columns={columns} data={tableData} />
+          <HighchartsReact highcharts={Highcharts} options={areaOptions} />
+          <Table columns={columns} data={tableData} />
         </div>
       )
     } else if (filters.metric === "areaInSqKm") {
@@ -362,12 +357,8 @@ const Results = (props) => {
 
       return (
         <div className="Results">
-          <HighchartsReact
-            className="Results-one-chart"
-            highcharts={Highcharts}
-            options={areaOptions}
-          />
-          <Table className="Results-table" columns={columns} data={tableData} />
+          <HighchartsReact highcharts={Highcharts} options={areaOptions} />
+          <Table columns={columns} data={tableData} />
         </div>
       )
     } else {
@@ -376,11 +367,10 @@ const Results = (props) => {
       return (
         <div className="Results">
           <HighchartsReact
-            className="Results-one-chart"
             highcharts={Highcharts}
             options={populationOptions}
           />
-          <Table className="Results-table" columns={columns} data={tableData} />
+          <Table columns={columns} data={tableData} />
         </div>
       )
     }
