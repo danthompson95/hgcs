@@ -32,7 +32,7 @@ const Results = (props) => {
           aggregatedPopulationData += parseInt(data.geonames[i].population)
         }
       } else {
-        if (data.geonames[i].continent == filters.continent) {
+        if (data.geonames[i].continent === filters.continent) {
           if (populationCounter < resultTotal) {
             parsedPopulationData.push({
               name: data.geonames[i].countryName,
@@ -89,7 +89,7 @@ const Results = (props) => {
           aggregatedAreaData += parseInt(data.geonames[i].areaInSqKm)
         }
       } else {
-        if (data.geonames[i].continent == filters.continent) {
+        if (data.geonames[i].continent === filters.continent) {
           if (areaCounter < resultTotal) {
             parsedAreaData.push({
               name: data.geonames[i].countryName,
@@ -185,7 +185,7 @@ const Results = (props) => {
     ]
 
     for (let i in data.geonames) {
-      if (filters.continent == "ALL") {
+      if (filters.continent === "ALL") {
         tableData.push({
           continentName: data.geonames[i].continent,
           countryName: data.geonames[i].countryName,
@@ -251,7 +251,7 @@ const Results = (props) => {
     ]
 
     for (let i in data.geonames) {
-      if (filters.continent == "ALL") {
+      if (filters.continent === "ALL") {
         tableData.push({
           continentName: data.geonames[i].continent,
           countryName: data.geonames[i].countryName,
@@ -315,7 +315,7 @@ const Results = (props) => {
     ]
 
     for (let i in data.geonames) {
-      if (filters.continent == "ALL") {
+      if (filters.continent === "ALL") {
         tableData.push({
           continentName: data.geonames[i].continent,
           countryName: data.geonames[i].countryName,
