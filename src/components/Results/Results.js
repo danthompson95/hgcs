@@ -343,34 +343,40 @@ const Results = (props) => {
       let [tableData, columns] = getAllTableData()
 
       return (
-        <div>
+        <div className="Results">
           <HighchartsReact
+            className="Results-two-charts"
             highcharts={Highcharts}
             options={populationOptions}
           />
           <HighchartsReact highcharts={Highcharts} options={areaOptions} />
-          <Table columns={columns} data={tableData} />
+          <Table className="Results-table" columns={columns} data={tableData} />
         </div>
       )
     } else if (filters.metric === "areaInSqKm") {
       let [tableData, columns] = getAreaTableData()
 
       return (
-        <div>
-          <HighchartsReact highcharts={Highcharts} options={areaOptions} />
-          <Table columns={columns} data={tableData} />
+        <div className="Results">
+          <HighchartsReact
+            className="Results-one-chart"
+            highcharts={Highcharts}
+            options={areaOptions}
+          />
+          <Table className="Results-table" columns={columns} data={tableData} />
         </div>
       )
     } else {
       let [tableData, columns] = getPopulationTableData()
 
       return (
-        <div>
+        <div className="Results">
           <HighchartsReact
+            className="Results-one-chart"
             highcharts={Highcharts}
             options={populationOptions}
           />
-          <Table columns={columns} data={tableData} />
+          <Table className="Results-table" columns={columns} data={tableData} />
         </div>
       )
     }
