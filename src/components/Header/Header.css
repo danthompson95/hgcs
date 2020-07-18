@@ -1,0 +1,19 @@
+.Header {
+  text-align: center;
+  background-color: #ddd;
+}
+
+.Header-h1 {
+  font-size: 46px;
+  padding: 40px 0;
+}
+
+.Header-button {
+  width: 15%;
+  height: 40px;
+  font-size: 26px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 0px #000;
+  cursor: pointer;
+}
