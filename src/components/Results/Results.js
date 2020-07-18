@@ -349,7 +349,11 @@ const Results = (props) => {
             highcharts={Highcharts}
             options={populationOptions}
           />
-          <HighchartsReact highcharts={Highcharts} options={areaOptions} />
+          <HighchartsReact
+            className="Results-two-charts"
+            highcharts={Highcharts}
+            options={areaOptions}
+          />
           <Table className="Results-table" columns={columns} data={tableData} />
         </div>
       )
