@@ -1,0 +1,15 @@
+.Filters {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Filters-label {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.Filters-select {
+  margin-right: 10px;
+  font-size: 20px;
+  width: 11%;
+}
